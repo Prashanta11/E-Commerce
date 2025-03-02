@@ -42,6 +42,17 @@ const CategoryNav = () => {
             arrows: false,
             drag: "free",
             pagination: false,
+            breakpoints: {
+              640: {
+                perPage: 2,
+              },
+              768: {
+                perPage: 6,
+              },
+              1024: {
+                perPage: 6,
+              },
+            },
           }}
           extensions={{ AutoScroll }}
         >

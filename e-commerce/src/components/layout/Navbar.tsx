@@ -21,11 +21,6 @@ const Navbar = () => {
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        {/* Logo */}
-        <Link to="/" className="font-bold text-[#FFB22C] text-2xl">
-          Trinetra
-        </Link>
-
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
           {["Home", "Shop", "About us", "Pages", "Contact"].map((item) => (
@@ -38,6 +33,11 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
+
+        {/* Logo */}
+        <Link to="/" className="font-bold text-[#FFB22C] text-2xl">
+          Trinetra
+        </Link>
 
         {/* Right Icons */}
         <div className="flex items-center gap-4">
