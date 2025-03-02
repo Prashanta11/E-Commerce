@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import ProductDetail from "./pages/ProductDetail"; // Import the new ProductDetail page
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 
@@ -11,7 +12,7 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* Add more routes as needed */}
+            <Route path="/product/:id" element={<ProductDetail />} />{" "}
           </Routes>
         </main>
         <Footer />
