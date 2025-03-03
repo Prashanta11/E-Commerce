@@ -19,7 +19,7 @@ const Button = ({
     "inline-flex items-center justify-center font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black";
 
   const variantStyles = {
-    primary: "bg-black text-white hover:bg-gray-800",
+    primary: "bg-black text-[#FFB22C] hover:bg-[#FFB22C] hover:text-black",
     secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300",
     outline: "border border-black text-black hover:bg-gray-100",
   };

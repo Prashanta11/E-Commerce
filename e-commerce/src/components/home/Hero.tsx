@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative h-[80vh] overflow-hidden">
+    <section className="relative h-[75vh] overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -28,7 +28,7 @@ const Hero = () => {
           <div className="mt-8">
             <Link
               to="/shop"
-              className="inline-block bg-black hover:bg-white px-8 py-3 rounded-md font-bold text-[#FFB22C] hover:text-black transition-colors"
+              className="inline-block bg-black hover:bg-[#FFB22C] px-8 py-3 rounded-md font-bold text-[#FFB22C] hover:text-black transition-colors"
             >
               Shop now
             </Link>

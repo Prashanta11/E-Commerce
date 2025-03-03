@@ -2,6 +2,7 @@ import {
   Facebook,
   Instagram,
   Mail,
+  MailWarningIcon,
   MapPin,
   Phone,
   Twitter,
@@ -86,16 +87,18 @@ const Footer = () => {
             <h3 className="mb-4 font-semibold text-lg">Get in Touch</h3>
             <div className="space-y-2">
               <div className="flex items-center gap-2">
-                <Mail size={20} />
-                <span>info.trinetrasystems@gmail.com</span>
-              </div>
-              <div className="flex items-center gap-2">
                 <Phone size={20} />
-                <span>+977 9876542112</span>
+                <span className="break-words">+977 9876542112</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin size={20} />
-                <span>Kathmandu, Nepal, 13646</span>
+                <span className="break-words">Kathmandu, Nepal, 13646</span>
+              </div>
+              <div className="flex items-center gap-2 w-full">
+                <Mail className="p-1 w-8 h-8" />
+                <span className="pt-4 md:pt-0 break-all">
+                  info.trinetra@gmail.com
+                </span>
               </div>
             </div>
           </div>

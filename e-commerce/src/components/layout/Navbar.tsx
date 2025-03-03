@@ -1,8 +1,11 @@
 import { Menu, Search, ShoppingBag, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCountStore } from "../../pages/countStore";
 
 const Navbar = () => {
+  const { count } = useCountStore();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -10,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="top-0 z-50 sticky bg-black backdrop-blur-sm w-full">
+    <header className="top-0 z-50 fixed bg-transparent w-full">
       <nav className="flex justify-between items-center mx-auto px-6 py-4">
         {/* Mobile Menu Button */}
         <button
@@ -21,38 +24,38 @@ const Navbar = () => {
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
+        {/* Logo */}
+        <Link to="/" className="font-bold text-black text-2xl">
+          Trinetra
+        </Link>
+
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-8">
           {["Home", "Shop", "About us", "Pages", "Contact"].map((item) => (
             <Link
               key={item}
               to={`/${item.toLowerCase().replace(" ", "")}`}
-              className="font-medium text-[#FFB22C] hover:text-white transition-colors"
+              className="font-medium text-black hover:text-white transition-colors"
             >
               {item}
             </Link>
           ))}
         </div>
 
-        {/* Logo */}
-        <Link to="/" className="font-bold text-[#FFB22C] text-2xl">
-          Trinetra
-        </Link>
-
         {/* Right Icons */}
         <div className="flex items-center gap-4">
-          <button
-            aria-label="Search"
-            className="text-[#FFB22C] hover:text-white"
-          >
+          <button aria-label="Search" className="text-black hover:text-white">
             <Search size={20} />
           </button>
           <Link
             to="/cart"
-            className="flex items-center text-[#FFB22C] hover:text-white"
+            className="flex items-center text-black hover:text-black"
           >
             <ShoppingBag size={20} />
-            <span className="ml-1">Cart (0)</span>
+            <span className="ml-1">
+              Cart
+              <span className="text-lg">({count})</span>
+            </span>
           </Link>
         </div>
       </nav>

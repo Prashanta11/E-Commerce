@@ -1,7 +1,8 @@
+import { RotateCcw, ShieldCheck, Truck } from "lucide-react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { Truck, ShieldCheck, RotateCcw } from "lucide-react";
 import { defaultProducts } from "../data/products";
+import { useCountStore } from "./countStore";
 
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -9,7 +10,12 @@ const ProductDetail = () => {
 
   const [selectedImage, setSelectedImage] = useState(product?.imageUrl || "");
   const [quantity, setQuantity] = useState(1);
+  const [isProductAddedToCart, setIsProductAddedToCart] = useState(false);
+  // const [products, setProducts] = useState(defaultProducts);
+
   const colors = ["Red", "Blue", "Black", "White"];
+  const { count, setCount, products, setProducts } = useCountStore();
+  console.log(count, "Count");
 
   if (!product) {
     return (
@@ -91,7 +97,15 @@ const ProductDetail = () => {
               />
             </div>
 
-            <button className="bg-[#FFB22C] hover:bg-[#e6a028] mt-6 py-3 rounded-md w-full font-bold text-black transition-colors">
+            <button
+              className="bg-[#FFB22C] hover:bg-[#e6a028] mt-6 py-3 rounded-md w-full font-bold text-black transition-colors"
+              onClick={() => {
+                setCount(count + quantity);
+                setIsProductAddedToCart(count as any);
+                setProducts([...products, product]);
+                console.log(products, "Products");
+              }}
+            >
               Add to cart
             </button>
 

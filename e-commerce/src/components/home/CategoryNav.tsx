@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { Link } from "react-router-dom";
 import "@splidejs/react-splide/css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import {
   Baby,
-  ShoppingBag,
   Footprints,
   Percent,
+  Shirt,
+  ShoppingBag,
+  ShoppingCart,
   Star,
   Tag,
-  Shirt,
-  ShoppingCart,
 } from "lucide-react";
 
 const categories = [
