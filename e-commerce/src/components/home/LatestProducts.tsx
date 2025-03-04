@@ -27,7 +27,7 @@ export default function LatestProducts({
       : products.filter((product) => product.category === activeCategory);
 
   return (
-    <section className="bg-black/95 mx-auto px-4 py-12 w-full">
+    <section className="bg-black mx-auto px-4 py-12 w-full">
       <div className="flex sm:flex-row flex-col justify-between items-start sm:items-center gap-4 mx-12 mb-10">
         <h2 className="font-bold text-[#FFB22C] text-xl sm:text-3xl">
           Our Latest Products
