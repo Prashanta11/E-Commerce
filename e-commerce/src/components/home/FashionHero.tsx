@@ -20,7 +20,7 @@ const FashionHero: React.FC<FashionHeroProps> = ({
   imageAlt = "Fashion models in stylish outfits",
 }) => {
   return (
-    <section className="bg-black/95 w-full">
+    <section className="bg-black w-full">
       <div className="items-center grid grid-cols-1 md:grid-cols-2 mx-auto py-8 md:py-14">
         <div className="flex flex-col justify-center space-y-6 bg-[#FFB22C] md:px-12 h-full md:text-left text-center">
           <h1 className="font-extrabold text-black text-3xl md:text-4xl lg:text-5xl leading-tight">
