@@ -8,7 +8,7 @@ const images = [
   "/ImageCarousel/Lshoes.avif",
   "/ImageCarousel/Men.avif",
   "/ImageCarousel/sunglasses.avif",
-  "/ImageCarousel/womenc.avif",
+  "/ImageCarousel/women copy.avif",
   "/ImageCarousel/kshoes.avif",
 ];
 
