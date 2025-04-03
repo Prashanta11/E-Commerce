@@ -26,6 +26,10 @@ export default function LatestProducts({
       ? products
       : products.filter((product) => product.category === activeCategory);
 
+  function addToCart(product: Product): void {
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <section className="bg-black mx-auto px-4 py-12 w-full">
       <div className="flex sm:flex-row flex-col justify-between items-start sm:items-center gap-4 mx-12 mb-10">
@@ -55,7 +59,7 @@ export default function LatestProducts({
         {filteredProducts.map((product) => (
           <div
             key={product.id}
-            className="bg-gray-100 shadow-sm hover:shadow-md rounded-xl overflow-hidden transition-shadow"
+            className="group bg-gray-100 shadow-sm hover:shadow-md rounded-xl overflow-hidden transition-shadow"
           >
             <div className="relative px-4 py-4 w-full h-65">
               <img
@@ -64,7 +68,7 @@ export default function LatestProducts({
                 className="border border-slate-200 rounded-xl w-full h-full object-cover"
               />
             </div>
-            <div className="flex justify-between items-center px-4 py-2">
+            <div className="flex justify-between items-center px-7 py-2">
               <h3 className="font-medium text-gray-900 text-md">
                 {product.name}
               </h3>
@@ -72,13 +76,20 @@ export default function LatestProducts({
                 ${product.price.toFixed(2)} USD
               </p>
             </div>
-            <div className="p-2">
+            {/* Buttons Section */}
+            <div className="flex justify-between items-center p-2">
               <Link
                 to={`/product/${product.id}`}
-                className="block bg-black hover:bg-[#FFB22C] mx-1 mb-2 py-2 rounded-md text-[#FFB22C] text-semibold hover:text-black text-center transition-colors"
+                className="bg-black hover:bg-[#FFB22C] mx-1 px-7 py-2 rounded-md text-[#FFB22C] text-semibold hover:text-black transition-colors"
               >
                 View Details
               </Link>
+              <button
+                className="bg-[#FFB22C] hover:bg-black mx-1 px-7 py-2 rounded-md font-semibold text-black hover:text-[#FFB22C] transition-colors"
+                onClick={() => addToCart(product)}
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
         ))}

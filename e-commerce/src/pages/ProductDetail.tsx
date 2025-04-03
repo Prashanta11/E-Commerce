@@ -28,8 +28,8 @@ const ProductDetail = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       <div className="mx-auto">
-        <div className="bg-black mb-10 py-10 w-full">
-          <h1 className="mb-8 font-bold text-[#FFB22C] text-5xl text-center">
+        <div className="bg-[#FFB22C] mb-10 py-20 w-full">
+          <h1 className="font-bold text-black text-5xl text-center">
             Product Details
           </h1>
         </div>
@@ -76,7 +76,7 @@ const ProductDetail = () => {
 
             <div className="mt-6">
               <label className="block mb-2 font-medium text-lg">Colors</label>
-              <select className="p-2 border border-gray-300 focus:border-[#FFB22C] rounded-md focus:outline-none focus:ring-1 focus:ring-[#FFB22C] w-full">
+              <select className="p-2 border border-gray-300 focus:border-[#FFB22C] rounded-md focus:outline-none focus:ring-[#FFB22C] focus:ring-1 w-full">
                 <option value="">Select Colors</option>
                 {colors.map((color) => (
                   <option key={color} value={color}>
@@ -86,28 +86,34 @@ const ProductDetail = () => {
               </select>
             </div>
 
-            <div className="mt-6">
+            <div className="mt-6 mb-2">
               <label className="block mb-2 font-medium text-lg">Quantity</label>
               <input
                 type="number"
                 min="1"
                 value={quantity}
                 onChange={(e) => setQuantity(Number(e.target.value))}
-                className="p-2 border border-gray-300 focus:border-[#FFB22C] rounded-md focus:outline-none focus:ring-1 focus:ring-[#FFB22C] w-full"
+                className="p-2 border border-gray-300 focus:border-[#FFB22C] rounded-md focus:outline-none focus:ring-[#FFB22C] focus:ring-1 w-full"
               />
             </div>
 
-            <button
-              className="bg-[#FFB22C] hover:bg-[#e6a028] mt-6 py-3 rounded-md w-full font-bold text-black transition-colors"
-              onClick={() => {
-                setCount(count + quantity);
-                setIsProductAddedToCart(count as any);
-                setProducts([...products, product]);
-                console.log(products, "Products");
-              }}
-            >
-              Add to cart
-            </button>
+            <div className="flex justify-between items-center gap-2 p-2">
+              <button
+                className="bg-[#FFB22C] hover:bg-[#e6a028] px-5 py-3 rounded-md w-1/2 font-bold text-black transition-colors"
+                onClick={() => {
+                  setCount(count + quantity);
+                  setIsProductAddedToCart(count as any);
+                  setProducts([...products, product]);
+                  console.log(products, "Products");
+                }}
+              >
+                Add to Cart
+              </button>
+
+              <button className="bg-[#FFB22C] hover:bg-[#e6a028] px-5 py-3 rounded-md w-1/2 font-bold text-black transition-colors">
+                Buy Now
+              </button>
+            </div>
 
             <div className="mt-8">
               <h3 className="mb-4 font-bold text-xl">About this item :</h3>
