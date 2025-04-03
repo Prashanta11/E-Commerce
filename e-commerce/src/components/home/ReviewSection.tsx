@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const reviews = [
@@ -56,9 +56,9 @@ const ReviewSection = () => {
               return (
                 <motion.div
                   key={reviewIndex}
-                  className="bg-[#090909] shadow-md p-6 rounded-sm"
+                  className="bg-[#090909] shadow-md p-6 rounded-sm h-[300px]"
                 >
-                  <div className="flex justify-center mb-4">
+                  <div className="flex justify-center mb-4 ]">
                     <div className="flex justify-center items-center bg-[#FFB22C] rounded-full w-14 h-14 font-bold text-black text-xl">
                       66
                     </div>
