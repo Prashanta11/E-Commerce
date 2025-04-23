@@ -80,9 +80,9 @@ export default function LatestProducts({
             <div className="flex justify-between items-center p-2">
               <Link
                 to={`/product/${product.id}`}
-                className="bg-black hover:bg-[#FFB22C] mx-1 px-7 py-2 rounded-md text-[#FFB22C] text-semibold hover:text-black transition-colors"
+                className="bg-black hover:bg-[#FFB22C] mx-4 px-8 py-2 rounded-md text-[#FFB22C] text-semibold hover:text-black transition-colors"
               >
-                View Details
+                Buy Now
               </Link>
               <button
                 className="bg-[#FFB22C] hover:bg-black mx-1 px-7 py-2 rounded-md font-semibold text-black hover:text-[#FFB22C] transition-colors"
