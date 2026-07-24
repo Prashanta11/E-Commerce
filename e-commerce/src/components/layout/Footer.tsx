@@ -2,7 +2,6 @@ import {
   Facebook,
   Instagram,
   Mail,
-  MailWarningIcon,
   MapPin,
   Phone,
   Twitter,
@@ -20,7 +19,7 @@ const Footer = () => {
               <h3 className="mb-4 font-bold text-[#FFB22C] text-2xl">
                 Trinetra
               </h3>
-              <p className="mb-6 text-[#FFB22C] text-md">
+              <p className="mb-6 hover:font-extrabold text-[#FFB22C] text-md hover:text-amber-300">
                 Elegance is always in style. Discover our latest collections of
                 premium clothing and accessories.
               </p>
@@ -29,7 +28,7 @@ const Footer = () => {
             <div className="flex space-x-6 mt-6">
               <Link
                 to="#"
-                className="px-1 py-1 border border-rounded-full hover:text-white"
+                className="hover:bg-[#FFB22C] px-1 py-1 border border-rounded-full hover:text-white"
               >
                 <Instagram size={20} />
               </Link>
@@ -105,7 +104,8 @@ const Footer = () => {
         </div>
         <div className="mt-12 pt-6 border-gray-800 border-t text-[#FFB22C] text-center">
           <p>
-            &copy; {new Date().getFullYear()} Trinetra. All rights reserved.
+            &copy; {new Date().getFullYear()} Trinetra systems.
+            <p> All rights reserved.</p>
           </p>
         </div>
       </div>
